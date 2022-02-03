@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Rubocop gem
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
