@@ -1,24 +1,38 @@
-# README
+# Blog Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This project is a backend rails application, it's based on the MVC concept. It allowes the user to create a profile and posts.
 
-Things you may want to cover:
 
-* Ruby version
+## Screenshot
+<img src='./screenshot'>
 
-* System dependencies
+## Getting started
+  Run the following commands on the terminal your local machine:
 
-* Configuration
+  - `git clone https://github.com/Rayan84/blog-app-rails.git`
+  - `cd blog-app-rails`
+  - `bundle`
+  - `rails s`
 
-* Database creation
+## Tests
+  Run the below command on the terminal:
+  
+  - `rspec`
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+👤 **Rayan Rassam**
 
-* Services (job queues, cache servers, search engines, etc.)
+- GitHub: [@Rayan84](https://github.com/Rayan84)
+- Twitter: [@Rayan65096267](https://twitter.com/Rayan65096267)
+- LinkedIn: [Rayan Rassam](https://www.linkedin.com/in/rayan-rassam/)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support 
+
+Give a ⭐️ if you like this project!
