@@ -1,22 +1,19 @@
 # Blog Application
 
 > This project is a backend rails application, it's based on the MVC concept. It allowes the user to create a profile and posts.
-
-
-## Screenshot
-<img src='./screenshot'>
-
 ## Getting started
   Run the following commands on the terminal your local machine:
 
   - `git clone https://github.com/Rayan84/blog-app-rails.git`
   - `cd blog-app-rails`
   - `bundle`
+  - `rails db:create`
   - `rails s`
 
 ## Tests
   Run the below command on the terminal:
-  
+
+  - `gem install rspec`  
   - `rspec`
 
 ## Authors
