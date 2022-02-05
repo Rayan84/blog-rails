@@ -7,7 +7,7 @@
   - `git clone https://github.com/Rayan84/blog-app-rails.git`
   - `cd blog-app-rails`
   - `bundle`
-  - `rails db:create`
+  - `rails db:migrate`
   - `rails s`
 
 ## Tests
