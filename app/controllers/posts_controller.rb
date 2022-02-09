@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   def show
     @post_number = params
     @post = Post.find_by(author: params[:user_id], id: params[:id])
+    @recent_comments = Comment.limit(5).where(post_id: params[:id]).order(created_at: :desc)
   end
 
   def update_counter
