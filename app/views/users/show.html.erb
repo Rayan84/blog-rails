@@ -1,14 +1,20 @@
-<h1>Single user</h1>
+<h1><%= @user.name %>'s Profile</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <ul>
-  <li>Name: <%= @user.name %></li>
+  <li>
+    <h3>Name: <%= @user.name %></h3>
+  </li>
   <li>Bio: <%= @user.bio %></li>
 </ul>
 
 
-
+<hr>
 <ul>
+  <h3>Most recent posts:</h3>
   <% @recent_posts.each do |post| %>
-    <li><%= post.created_at %></li>
+    <li>
+    <h4><%= post.title %></h4>
+    <p> <%= post.created_at %></p>
+    </li>
   <% end %>
 </ul>

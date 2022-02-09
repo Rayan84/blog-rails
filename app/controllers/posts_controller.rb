@@ -11,6 +11,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+    @post_number = params
+    @post = Post.find_by(author: params[:user_id], id: params[:id])
   end
+
+  def update_counter
+    @user = User.all.find(params[:user_id])
+    @user.update(posts_counter: posts_counter + 1)
+  end
+
 end
