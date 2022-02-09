@@ -8,6 +8,5 @@ class Post < ApplicationRecord
 
   def self.recent_comments(parameters)
     @recent_comments = Comment.limit(5).where(post_id: parameters).order(created_at: :desc)
-
   end
 end

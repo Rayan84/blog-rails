@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  
   # def recent_posts
   #   @recent_posts_lists = []
   #   User.all.each do |each_user|
@@ -11,7 +10,6 @@ class User < ApplicationRecord
   def self.recent_posts(parameters)
     @recent_posts = Post.limit(3).where(author_id: parameters).order(created_at: :desc)
   end
-
 
   has_many :posts
   has_many :likes

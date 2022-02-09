@@ -4,9 +4,7 @@ class PostsController < ApplicationController
     @last_user = User.last
     @posts = []
     Post.all.each do |post|
-      if post.author_id.to_s == params[:user_id]
-        @posts.push(post.title)
-      end
+      @posts.push(post.title) if post.author_id.to_s == params[:user_id]
     end
   end
 
@@ -26,7 +24,5 @@ class PostsController < ApplicationController
 
   def update_likes_counter
     Like.likes_counter(params[:id])
-  
   end
-
 end
