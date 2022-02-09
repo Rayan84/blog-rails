@@ -4,3 +4,11 @@
   <li>Name: <%= @user.name %></li>
   <li>Bio: <%= @user.bio %></li>
 </ul>
+
+
+
+<ul>
+  <% @recent_posts.each do |post| %>
+    <li><%= post.created_at %></li>
+  <% end %>
+</ul>
