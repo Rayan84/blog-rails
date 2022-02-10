@@ -1,2 +1,10 @@
-<h1>User posts</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+<p><%= @post_number %></p>
+<h1><%= @post.title %></h1>
+<h3>By: <%= @user.name %></h3>
+<p><%= @post.text %></p>
+<hr>
+<h4>Comments:</h4>
+<% @recent_comments.each do |recent_comment| %>
+  <p><%= recent_comment.text %></p>
+<% end %>
