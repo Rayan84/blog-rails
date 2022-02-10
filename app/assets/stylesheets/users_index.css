@@ -20,8 +20,16 @@
   text-align: center;
 }
 
+ul {
+  padding-left: 0;
+}
+
 li {
   list-style: none;
   background-color: aliceblue;
   margin-top: 15px;
+}
+
+.padding-20-px {
+  padding: 20px;
 }

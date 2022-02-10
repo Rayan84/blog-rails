@@ -1,20 +1,33 @@
+<div class="page-container">
 <h1><%= @user.name %>'s Profile</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="display-flex">
+        <div class="user-photo-container">
+          <img class="user-photo" src=<%= @user.photo %> />
+        </div>
+        <div class="user-text-details-container">
+          <h2>
+            <%= @user.name %>
+          </h2>
+          <p>Number of posts: <%= @user.posts_counter %></p>
+        </div>
+      </div>
 <ul>
-  <li>
-    <h3>Name: <%= @user.name %></h3>
+  <li class="padding-20-px">
+    <h3>Bio:</h3>
+    <p> <%= @user.bio %></p>
   </li>
-  <li>Bio: <%= @user.bio %></li>
 </ul>
 
-
-<hr>
-<ul>
+<ul class="padding-20-px">
   <h3>Most recent posts:</h3>
   <% @recent_posts.each do |post| %>
-    <li>
+    <li class="padding-20-px">
     <h4><%= post.title %></h4>
     <p> <%= post.created_at %></p>
     </li>
   <% end %>
 </ul>
+  <div class="text-align-center">
+    <button class="see-all-posts-button">See all posts</button>
+  </div>
+</div>
