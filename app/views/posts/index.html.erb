@@ -1,7 +1,27 @@
-<h1><%= @user.name %>'s Posts</h1>
-<h2>The last user is: <%= @last_user.name %></h2>
+<div class="page-container">
+  <h1><%= @user.name %>'s Posts</h1>
+  <div class="display-flex">
+    <div class="user-photo-container">
+      <img class="user-photo" src=<%= @user.photo %> >
+    </div>
+    <div class="user-text-details-container">
+       <h2><%= @user.name %></h2>
+    </div>
+  </div>
+  <h2>Posts:</h2>
 
-<ul>
-  <li> <%= @posts %> </li>
+  <ul>
+    <% @posts.each do |post| %>
+      <li class="padding-20-px">
+        <h3> <%= post.title %> </h3>
+        <p class="paragraph-text"><%= post.text %></p>
+        <% @comments.each do |comment| %>
+          <% if comment.post_id == post.id %>
+            <p><%= comment.text %></p>
+          <% end %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-</ul>

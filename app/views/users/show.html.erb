@@ -1,16 +1,16 @@
 <div class="page-container">
-<h1><%= @user.name %>'s Profile</h1>
-<div class="display-flex">
-        <div class="user-photo-container">
-          <img class="user-photo" src=<%= @user.photo %> />
-        </div>
+  <h1><%= @user.name %>'s Profile</h1>
+  <div class="display-flex">
+    <div class="user-photo-container">
+      <img class="user-photo" src=<%= @user.photo %> />
+      </div>
         <div class="user-text-details-container">
           <h2>
             <%= @user.name %>
           </h2>
-          <p>Number of posts: <%= @user.posts_counter %></p>
-        </div>
+        <p>Number of posts: <%= @user.posts_counter %></p>
       </div>
+    </div>
 <ul>
   <li class="padding-20-px">
     <h3>Bio:</h3>

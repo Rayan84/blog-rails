@@ -33,3 +33,10 @@ li {
 .padding-20-px {
   padding: 20px;
 }
+
+.paragraph-text {
+  background-color: rgba(172, 162, 149, 0.2);
+  padding: 15px;
+  border-radius: 4px;
+  border-bottom: solid grey 1px;
+}

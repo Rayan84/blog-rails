@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
   def index
     @user = User.all.find(params[:user_id])
-    @last_user = User.last
     @posts = []
+    @comments = Comment.all
     Post.all.each do |post|
-      @posts.push(post.title) if post.author_id.to_s == params[:user_id]
+      @posts.push(post) if post.author_id.to_s == params[:user_id]
     end
   end
+
 
   def show
     @user = User.all.find(params[:user_id])
