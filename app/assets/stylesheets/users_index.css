@@ -1,3 +1,7 @@
+.align-items-center {
+  align-items: center;
+}
+
 .user-photo-container {
   margin: 20px;
 }
@@ -35,8 +39,11 @@ ul {
 
 li {
   list-style: none;
-  background-color: aliceblue;
   margin-top: 15px;
+}
+
+.background-color-aliceblue {
+  background-color: aliceblue;
 }
 
 .padding-20-px {
@@ -47,5 +54,12 @@ li {
   background-color: rgba(172, 162, 149, 0.2);
   padding: 15px;
   border-radius: 4px;
-  border-bottom: solid grey 1px;
+}
+
+.float-right {
+  float: right;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }

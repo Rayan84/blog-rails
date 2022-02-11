@@ -12,7 +12,7 @@
       </div>
     </div>
 <ul>
-  <li class="padding-20-px">
+  <li class="padding-20-px background-color-aliceblue">
     <h3>Bio:</h3>
     <p> <%= @user.bio %></p>
   </li>
@@ -21,7 +21,7 @@
 <ul class="padding-20-px">
   <h3>Most recent posts:</h3>
   <% @recent_posts.each do |post| %>
-    <li class="padding-20-px display-flex flex-direction-column">
+    <li class="padding-20-px display-flex flex-direction-column background-color-aliceblue">
       <h4><%= post.title %></h4>
       <p><%= post.text %></p>
       <p> <%= post.created_at %></p>

@@ -2,7 +2,7 @@
 <h1 class="text-align-center">Users</h1>
 <ul>
   <% @user.each do |user| %>
-    <li>
+    <li class="background-color-aliceblue">
       <%= link_to "#{root_path}users/#{user.id}"  do %>
       <div class="display-flex">
         <div class="user-photo-container">
