@@ -14,6 +14,11 @@
 
 .user-text-details-container {
   padding-left: 20px;
+  width: 80%;
+}
+
+.user-text-details-container p {
+  float: right;
 }
 
 .text-align-center {
