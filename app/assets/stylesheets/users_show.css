@@ -19,3 +19,7 @@
   background-color: rgb(54, 4, 4);
   cursor: pointer;
 }
+
+.align-self-end {
+  align-self: end;
+}

@@ -8,7 +8,7 @@
           <h2>
             <%= @user.name %>
           </h2>
-        <p>Number of posts: <%= @total_posts %></p>
+          <p>Number of posts: <%= @total_posts %></p>
       </div>
     </div>
 <ul>
@@ -21,9 +21,16 @@
 <ul class="padding-20-px">
   <h3>Most recent posts:</h3>
   <% @recent_posts.each do |post| %>
-    <li class="padding-20-px">
-    <h4><%= post.title %></h4>
-    <p> <%= post.created_at %></p>
+    <li class="padding-20-px display-flex flex-direction-column">
+      <h4><%= post.title %></h4>
+      <p><%= post.text %></p>
+      <p> <%= post.created_at %></p>
+      <p class="align-self-end">
+        <span>Comments:</span>
+        <span><%= @comments.where(post_id: post.id).count %></span>
+        <span>Likes: </span>
+        <span><%= @likes.where(post_id: post.id).count %></span>
+      </p>
     </li>
   <% end %>
 </ul>

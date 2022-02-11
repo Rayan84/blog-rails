@@ -1,11 +1,11 @@
 <div class="page-container">
-  <h1><%= @user.name %>'s Posts</h1>
   <div class="display-flex">
     <div class="user-photo-container">
       <img class="user-photo" src=<%= @user.photo %> >
     </div>
     <div class="user-text-details-container">
        <h2><%= @user.name %></h2>
+       <p>Number of posts: <%= @posts.length %></p>
     </div>
   </div>
   <h2>Posts:</h2>
@@ -14,7 +14,10 @@
     <% @posts.each do |post| %>
       <li class="padding-20-px">
         <h3> <%= post.title %> </h3>
-        <p class="paragraph-text"><%= post.text %></p>
+        <p class="paragraph-text display-flex flex-direction-column">
+          <span><%= post.text %></span>
+          <span class="align-self-end">Comments: <%= @comments.where(post_id: post.id).count %>, Likes: <%= @likes.where(post_id: post.id).count %></span>
+        </p>
         <% @comments.each do |comment| %>
           <% if comment.post_id == post.id %>
             <p><%= comment.text %></p>
@@ -23,5 +26,7 @@
       </li>
     <% end %>
   </ul>
+    <div class="text-align-center">
+    <button class="see-all-posts-button">Pagination</button>
+  </div>
 </div>
-

@@ -8,5 +8,7 @@ class UsersController < ApplicationController
     @total_posts = Post.where(author_id: params[:id]).count
     @user = User.find(params[:id])
     @recent_posts = Post.limit(3).where(author_id: params[:id]).order(created_at: :desc)
+    @comments = Comment.all
+    @likes = Like.all
   end
 end
