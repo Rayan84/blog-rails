@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   def show
     @user = User.all.find(params[:user_id])
     @users = User.all

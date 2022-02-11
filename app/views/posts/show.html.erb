@@ -15,10 +15,11 @@
   <div class="background-color-aliceblue padding-20-px">
   <% @comments.each do |comment| %>
     <% if comment.post_id == @post.id %>
-      <p>- <% @users.each do |user| %>
-             <%= user.name if user.id == comment.author_id %>
-           <% end %>
-      : <%= comment.text %></p>
+      <p>
+        -<% @users.each do |user| %>
+          <%= user.name if user.id == comment.author_id %>
+        <% end %>
+        :<%= comment.text %></p>
     <% end %>
   <% end %>
   </div>
