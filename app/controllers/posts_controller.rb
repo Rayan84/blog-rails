@@ -27,4 +27,16 @@ class PostsController < ApplicationController
     @arr
   end
   helper_method :five_comments
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
 end

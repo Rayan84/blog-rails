@@ -11,4 +11,16 @@ class UsersController < ApplicationController
     @comments = Comment.all
     @likes = Like.all
   end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
 end

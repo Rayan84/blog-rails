@@ -1,0 +1,8 @@
+<div class="page-container">
+  <h1>New User</h1>
+  <%= form_with model: @user do |form| %>
+  <%= form.text_field :username %>
+  <%= form.password_field :password %>
+  <%= form.submit "Register" %>
+<% end %>
+</div>
