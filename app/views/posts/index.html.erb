@@ -1,7 +1,33 @@
-<h1><%= @user.name %>'s Posts</h1>
-<h2>The last user is: <%= @last_user.name %></h2>
+<div class="page-container">
+  <div class="display-flex">
+    <div class="user-photo-container">
+      <img class="user-photo" src=<%= @user.photo %> >
+    </div>
+    <div class="user-text-details-container">
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @posts.length %></p>
+    </div>
+  </div>
+  <h2>Posts:</h2>
 
-<ul>
-  <li> <%= @posts %> </li>
-
-</ul>
+  <ul>
+    <% @posts.each do |post| %>
+    <%= link_to "#{root_path}users/#{@user.id}/posts/#{post.id}", class: "text-decoration-none" do %>
+      <li class="padding-20-px background-color-aliceblue">
+        <h3> <%= post.title %> </h3>
+        <p class="paragraph-text display-flex flex-direction-column">
+          <span><%= post.text %></span>
+          <span class="align-self-end">Comments: <%= @comments.where(post_id: post.id).count %>, Likes: <%= @likes.where(post_id: post.id).count %></span>
+        </p>
+        <h4>Comments:</h4>
+        <% five_comments(post.id).each do |single_comment| %>
+          <p><%= single_comment.text %></p>
+        <% end %>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+    <div class="text-align-center">
+    <button class="see-all-posts-button">Pagination</button>
+  </div>
+</div>
