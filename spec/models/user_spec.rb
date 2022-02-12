@@ -27,7 +27,5 @@ RSpec.describe User, type: :model do
       subject.posts_counter = -1
       expect(subject).to_not be_valid
     end
-
-
   end
 end

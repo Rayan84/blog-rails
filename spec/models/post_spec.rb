@@ -30,7 +30,6 @@ RSpec.describe Post, type: :model do
 
     describe 'post model method' do
       before { 10.times { |_comment| Comment.create(post_id: subject.id) } }
-
     end
   end
 end
