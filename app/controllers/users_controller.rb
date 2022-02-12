@@ -11,4 +11,8 @@ class UsersController < ApplicationController
     @comments = Comment.all
     @likes = Like.all
   end
+
+  def edit
+    @user = User.includes(:posts).find(params[:user_id])
+  end
 end
