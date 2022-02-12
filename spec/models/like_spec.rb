@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  user1 = User.new
+  post1 = Post.new(title: 'post_test', text: 'this is post test', author: user1)
+  subject do
+    Like.new
+  end
+
+
 end
