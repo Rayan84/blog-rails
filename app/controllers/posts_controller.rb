@@ -33,25 +33,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    flash.alert = "create called"
-    @user = User.all.find(params[:user_id])
-    #redirect_to root_path
-    #render params
-    
+    flash.alert = 'create called'
     @post = Post.create(author_id: params[:user_id], title: params[:title], text: params[:text])
-
-
+    render :create
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
-  end
+  def update; end
 
   private
+
   def user_params
     params.require(:post).permit(:title, :text)
   end
-  
 end
