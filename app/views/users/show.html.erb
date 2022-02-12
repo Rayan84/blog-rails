@@ -21,6 +21,7 @@
 <ul class="padding-20-px">
   <h3>Most recent posts:</h3>
   <% @recent_posts.each do |post| %>
+    <%= link_to "#{root_path}users/#{@user.id}/posts/#{post.id}", class: "text-decoration-none" do %>
     <li class="padding-20-px display-flex flex-direction-column background-color-aliceblue">
       <h4><%= post.title %></h4>
       <p><%= post.text %></p>
@@ -32,6 +33,7 @@
         <span><%= @likes.where(post_id: post.id).count %></span>
       </p>
     </li>
+    <% end %>
   <% end %>
 </ul>
   <div class="text-align-center">
