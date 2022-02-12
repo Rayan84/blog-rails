@@ -6,7 +6,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(author_id: current_user.id, text: comment_params[:text], post_id: params[:post_id])
     redirect_back(fallback_location: root_path)
-    flash.alert = 'Comment posted...'
+    flash.alert = if save
+                    'Comment posted...'
+                  else
+                    'Comment failed...'
+                  end
   end
 
   def update; end
