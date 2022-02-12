@@ -4,8 +4,8 @@
       <img class="user-photo" src=<%= @user.photo %> >
     </div>
     <div class="user-text-details-container">
-       <h2><%= @user.name %></h2>
-       <p>Number of posts: <%= @posts.length %></p>
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @posts.length %></p>
     </div>
   </div>
   <h2>Posts:</h2>
@@ -18,10 +18,8 @@
           <span><%= post.text %></span>
           <span class="align-self-end">Comments: <%= @comments.where(post_id: post.id).count %>, Likes: <%= @likes.where(post_id: post.id).count %></span>
         </p>
-        <% @comments.each do |comment| %>
-          <% if comment.post_id == post.id %>
-            <p><%= comment.text %></p>
-          <% end %>
+        <% five_comments(post.id).each do |single_comment| %>
+          <p><%= single_comment.text %></p>
         <% end %>
       </li>
     <% end %>

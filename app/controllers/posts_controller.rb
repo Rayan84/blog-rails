@@ -17,4 +17,14 @@ class PostsController < ApplicationController
     @comments = Comment.all
     @likes = Like.all
   end
+
+  def five_comments(post_index)
+    @arr = []
+    @comments = Comment.limit(5).where(post_id: post_index).order(created_at: :desc)
+    @comments.each do |comment|
+      @arr.push(comment)
+    end
+    return @arr
+  end
+  helper_method :five_comments
 end
