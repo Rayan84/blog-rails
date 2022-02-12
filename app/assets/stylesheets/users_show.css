@@ -3,10 +3,7 @@
 }
 
 .see-all-posts-button {
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 18px;
   background-color: coral;
   color: white;
   font-weight: 300;
