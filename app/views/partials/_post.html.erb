@@ -1,0 +1,6 @@
+<p>New Post</p>
+<%= form_with model: @post do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_field :text %>
+  <%= form.submit "Create Post" %>
+<% end %>

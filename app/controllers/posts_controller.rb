@@ -27,4 +27,24 @@ class PostsController < ApplicationController
     @arr
   end
   helper_method :five_comments
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    flash.alert = 'create called'
+    @post = Post.create(author_id: params[:user_id], title: params[:title], text: params[:text])
+    redirect_back(fallback_location: root_path)
+  end
+
+  def edit; end
+
+  def update; end
+
+  private
+
+  def user_params
+    params.require(:post).permit(:title, :text)
+  end
 end

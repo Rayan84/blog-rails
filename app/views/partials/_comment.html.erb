@@ -1,0 +1,11 @@
+
+<div class="comment-like-container">
+    <%= form_with model:[@post, @post.comments.build], method: :post, local: true do |form| %>
+    <div class="form-group comment-group">
+        <%= form.label "New comment", class:"form-label" %>
+        <%= form.text_field :text, size: "50x20", :placeholder => "Write comment...", required: true, class: 'form-control-text' %>
+    </div>
+  <%= form.submit "Add Comment", class: 'add-comment btn btn-primary mt-4' %>
+<% end %>
+
+</div>
