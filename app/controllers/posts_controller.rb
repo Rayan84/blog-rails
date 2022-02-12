@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   def create
     flash.alert = 'create called'
     @post = Post.create(author_id: params[:user_id], title: params[:title], text: params[:text])
-    render :create
+    redirect_back(fallback_location: root_path)
   end
 
   def edit; end
