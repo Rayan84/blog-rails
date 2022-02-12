@@ -5,9 +5,6 @@ class LikesController < ApplicationController
 
   def create
     @like = Like.create(author_id: current_user.id, post_id: params[:post_id])
-
-    puts params[:user_id]
-    flash[:notice] = 'Like created'
   end
 
   def update; end
