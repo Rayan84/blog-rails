@@ -29,9 +29,18 @@ class PostsController < ApplicationController
   helper_method :five_comments
 
   def new
+    @post = Post.new
   end
 
   def create
+    flash.alert = "create called"
+    @user = User.all.find(params[:user_id])
+    #redirect_to root_path
+    #render params
+    
+    @post = Post.create(author_id: params[:user_id], title: params[:title], text: params[:text])
+
+
   end
 
   def edit
@@ -39,4 +48,10 @@ class PostsController < ApplicationController
 
   def update
   end
+
+  private
+  def user_params
+    params.require(:post).permit(:title, :text)
+  end
+  
 end
