@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(author_id: current_user.id, text: comment_params[:text], post_id: params[:post_id])
     redirect_back(fallback_location: root_path)
-
   end
 
   def update; end
