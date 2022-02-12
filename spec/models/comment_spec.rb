@@ -4,6 +4,7 @@ RSpec.describe Comment, type: :model do
   describe 'comment model methods' do
     user1 = User.new
     post1 = Post.new(title: 'post_test', text: 'this is post test', author: user1, likes_counter: 8)
+    puts user1
     subject do
       Comment.new
     end
