@@ -19,6 +19,7 @@
           <span><%= post.text %></span>
           <span class="align-self-end">Comments: <%= @comments.where(post_id: post.id).count %>, Likes: <%= @likes.where(post_id: post.id).count %></span>
         </p>
+        <h4>Comments:</h4>
         <% five_comments(post.id).each do |single_comment| %>
           <p><%= single_comment.text %></p>
         <% end %>

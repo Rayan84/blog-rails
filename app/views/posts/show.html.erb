@@ -13,6 +13,7 @@
     <p class="paragraph-text"><%= @post.text %></p>
   </div>
   <div class="background-color-aliceblue padding-20-px">
+  <h4>Comments:</h4>
   <% @comments.each do |comment| %>
     <% if comment.post_id == @post.id %>
       <p>

@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @comments.each do |comment|
       @arr.push(comment)
     end
-    return @arr
+    @arr
   end
   helper_method :five_comments
 end
