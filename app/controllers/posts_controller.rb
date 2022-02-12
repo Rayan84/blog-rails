@@ -33,9 +33,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(author_id: params[:user_id], title: params[:title], text: params[:text])
+    @post = Post.new(author_id: params[:user_id], title: params[:title], text: params[:text])
     redirect_back(fallback_location: root_path)
-    flash.alert = if save
+    flash.alert = if @post.save
                     'Comment posted...'
                   else
                     'Comment failed...'

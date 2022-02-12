@@ -4,8 +4,8 @@ class LikesController < ApplicationController
   end
 
   def create
-    @like = Like.create(author_id: current_user.id, post_id: params[:post_id])
-    flash.alert = if save
+    @like = Like.new(author_id: current_user.id, post_id: params[:post_id])
+    flash.alert = if @like.save
                     'Comment posted...'
                   else
                     'Comment failed...'
