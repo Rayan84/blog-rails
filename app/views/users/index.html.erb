@@ -3,7 +3,7 @@
 <ul>
   <% @user.each do |user| %>
     <li class="background-color-aliceblue">
-      <%= link_to "#{root_path}users/#{user.id}"  do %>
+      <%= link_to "#{root_path}users/#{user.id}", class: "text-decoration-none" do %>
       <div class="display-flex">
         <div class="user-photo-container">
           <img class="user-photo" src=<%= user.photo %> />

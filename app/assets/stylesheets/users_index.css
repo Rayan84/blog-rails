@@ -63,3 +63,7 @@ li {
 .justify-content-space-between {
   justify-content: space-between;
 }
+
+.text-decoration-none {
+  text-decoration: none;
+}
