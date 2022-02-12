@@ -12,6 +12,7 @@
 
   <ul>
     <% @posts.each do |post| %>
+    <%= link_to "#{root_path}users/#{@user.id}/posts/#{post.id}" do %>
       <li class="padding-20-px background-color-aliceblue">
         <h3> <%= post.title %> </h3>
         <p class="paragraph-text display-flex flex-direction-column">
@@ -22,6 +23,7 @@
           <p><%= single_comment.text %></p>
         <% end %>
       </li>
+      <% end %>
     <% end %>
   </ul>
     <div class="text-align-center">
